@@ -41,7 +41,7 @@ async def logo_gen(event):
     else:
         pics = []
         async for i in event.client.iter_messages(
-            "@GeezLogo", filter=InputMessagesFilterPhotos
+            "@xlientsLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -51,7 +51,7 @@ async def logo_gen(event):
     if not bg_:
         pics = []
         async for i in event.client.iter_messages(
-            "@GeezLogo", filter=InputMessagesFilterPhotos
+            "@xlientsLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -84,7 +84,7 @@ async def logo_gen(event):
     y = (image_height - h) / 2
     draw.text((x, y), name, font=font, fill="white",
               stroke_width=strke, stroke_fill="black")
-    flnme = f"geez.png"
+    flnme = f"xlients.png"
     img.save(flnme, "png")
     await xx.edit("`Done!`")
     if os.path.exists(flnme):
